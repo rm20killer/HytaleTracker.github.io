@@ -1,26 +1,53 @@
 [
     {
-        "type": "tweet",
+        "mainPlatform": "tweet",
         "summary": "this is an example",
         "mainText": "wow, more example text, I should have used lorem ipsum",
         "date": "August 28 2025",
         "link": "https://google.com",
-        "tags": ["example", "lorem ipsum"]
+        "tags": ["example", "lorem ipsum"],
+        "sources": [{
+            "1": "https://source1.com",
+            "2": "https://source2.com",
+            "3": "https://source3.com"
+        }]
     },
     {
-        "type": "tweet",
+        "mainPlatform": "tweet",
         "summary": "this is an example",
         "mainText": "wow, more example text, I should have used lorem ipsum. This is to test how bigger boxes change the formatting with the two sides thing, this sohuld be long enough now. wow, more example text, I should have used lorem ipsum. This is to test how bigger boxes change the formatting with the two sides thing, this sohuld be long enough now.",
         "date": "August 27 2025",
         "link": "https://google.com",
-        "tags": ["example", "lorem ipsum"]
+        "tags": ["example", "lorem ipsum"],
+        "sources": [{
+            "1": "https://source1.com",
+            "2": "https://source2.com",
+            "3": "https://source3.com"
+        }]
     },
     {
-        "type": "tweet",
+        "mainPlatform": "tweet",
         "summary": "this is an example",
         "mainText": "wow, more example text, I should have used lorem ipsum",
         "date": "August 27 2025",
+        "tags": ["example", "lorem ipsum"],
+        "sources": [{
+            "1": "https://source1.com",
+            "2": "https://source2.com",
+            "3": "https://source3.com"
+        }]
+    },
+        {
+        "mainPlatform": "tweet",
+        "summary": "this is an example",
+        "mainText": "wow, more example text, I should have used lorem ipsum. This is to test how bigger boxes change the formatting with the two sides thing, this sohuld be long enough now. wow, more example text, I should have used lorem ipsum. This is to test how bigger boxes change the formatting with the two sides thing, this sohuld be long enough now.",
+        "date": "August 27 2025",
         "link": "https://google.com",
-        "tags": ["example", "lorem ipsum"]
+        "tags": ["example", "lorem ipsum"],
+        "sources": [{
+            "1": "https://source1.com",
+            "2": "https://source2.com",
+            "3": "https://source3.com"
+        }]
     }
 ]
