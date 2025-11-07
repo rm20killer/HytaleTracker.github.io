@@ -71,7 +71,19 @@ if(innerWidth > innerHeight){
 
         const sourcesDiv = document.createElement("div");
         sourcesDiv.id = "sources-div";
+
+        const xButton = document.createElement("span");
+        xButton.textContent = "X";
+        xButton.className = "xButton";
+        sourcesDiv.appendChild(xButton);
+
+        xButton.addEventListener("click", () => {
+            sourcesDiv.remove();
+            console.log("div removed");
+        })
+
         const sourcesHeader = document.createElement("h3");
+        sourcesHeader.className = "sourcesHeader";
         sourcesHeader.textContent = "Sources:";
         sourcesDiv.appendChild(sourcesHeader);
 
@@ -85,6 +97,7 @@ if(innerWidth > innerHeight){
         fetch("data/news.json")
         .then(response => response.json())
         .then(data => {
+            try {
             let source = 1;
             data[jsonIndex].sources.forEach(sourceObj => {
                 Object.values(sourceObj).forEach(url => {
@@ -100,6 +113,9 @@ if(innerWidth > innerHeight){
                     source += 1;
                 });
             });
+            } catch (error){
+                console.log("error loading sources", error);
+            }
         })
 
         document.body.appendChild(sourcesDiv);
