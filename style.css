@@ -73,7 +73,7 @@ a.invisible-link{
     text-decoration: none;
     color: inherit;
 }
-@media (max-width: 800px) {
+@media (max-width: 800px), (orientation: portrait){
     /* mobile devices */
     hr{
         width: 50%;
