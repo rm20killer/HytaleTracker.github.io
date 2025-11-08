@@ -116,4 +116,20 @@
         border-radius: 10px;
         font-size: 0.8em;
     }
+    #sources-div{
+        background-color: #c5c5c5;
+        height: fit-content;
+        width: 90%;
+        border-radius: 10px;
+        padding: 10px;
+        text-align: center;
+    }
+    .xButton{
+        float: right;
+        cursor: pointer;
+        font-size: larger;
+    }
+    .sourcesHeader{
+        float: top;
+    }
 }

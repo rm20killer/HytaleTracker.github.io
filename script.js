@@ -71,7 +71,7 @@ function filterItems(item, filters, minDate, maxDate){
         itemDate.setFullYear(parseInt(y));
 
         let setDate = new Date(minDate);
-        setDate.setTime(setDate.getTime() + 86400000)
+        setDate.setTime(setDate.getTime())
 
         console.log("item date", itemDate, "set date", setDate);
 
@@ -112,73 +112,81 @@ function filterItems(item, filters, minDate, maxDate){
 document.addEventListener("DOMContentLoaded", function() {
     createNewsElements("null", "null", "null");
 });
-//desktop sources
-if(innerWidth > innerHeight){
-    newsContainer.addEventListener("click", function(event) {
-        try {
-            const sourcesDiv = document.getElementById("sources-div");
-            sourcesDiv.remove();
-            console.log("Sources div removed");
-        } catch (error) {
-            console.log("No sources div to remove");
-        }
-        console.log("News container clicked");
+//sources
+newsContainer.addEventListener("click", function(event) {
+    try {
+        const sourcesDiv = document.getElementById("sources-div");
+        sourcesDiv.remove();
+        console.log("Sources div removed");
+    } catch (error) {
+        console.log("No sources div to remove");
+    }
+    console.log("News container clicked");
 
-        const clickedDiv = event.target.closest(".news-item");
-        if (!clickedDiv) return;
+    const clickedDiv = event.target.closest(".news-item");
+    if (!clickedDiv) return;
 
-        const sourcesDiv = document.createElement("div");
-        sourcesDiv.id = "sources-div";
+    const sourcesDiv = document.createElement("div");
+    sourcesDiv.id = "sources-div";
 
-        const xButton = document.createElement("span");
-        xButton.textContent = "X";
-        xButton.className = "xButton";
-        sourcesDiv.appendChild(xButton);
+    const xButton = document.createElement("span");
+    xButton.textContent = "X";
+    xButton.className = "xButton";
+    sourcesDiv.appendChild(xButton);
 
-        xButton.addEventListener("click", () => {
-            sourcesDiv.remove();
-            console.log("div removed");
-        })
+    xButton.addEventListener("click", () => {
+        sourcesDiv.remove();
+        console.log("div removed");
+    })
 
-        const sourcesHeader = document.createElement("h3");
-        sourcesHeader.className = "sourcesHeader";
-        sourcesHeader.textContent = "Sources:";
-        sourcesDiv.appendChild(sourcesHeader);
+    const sourcesHeader = document.createElement("h3");
+    sourcesHeader.className = "sourcesHeader";
+    sourcesHeader.textContent = "Sources:";
+    sourcesDiv.appendChild(sourcesHeader);
 
+    //desktop
+    if(innerHeight < innerWidth){
         const rect = clickedDiv.getBoundingClientRect();
         sourcesDiv.style.position = "absolute";
         sourcesDiv.style.top = `${rect.top + window.scrollY}px`;
         sourcesDiv.style.left = `${rect.right + 10 + window.scrollX}px`;
+    }else{
+        const rect = clickedDiv.getBoundingClientRect();
+        sourcesDiv.style.position = "absolute";
+        sourcesDiv.style.top = `${rect.top + window.scrollY + clickedDiv.offsetHeight}px`;
+        sourcesDiv.style.left = `${(innerWidth - clickedDiv.offsetWidth) / 2}px`
+    }
 
 
-        jsonIndex = clickedDiv.id;
-        fetch("data/news.json")
-        .then(response => response.json())
-        .then(data => {
-            try {
-            let source = 1;
-            data[jsonIndex].sources.forEach(sourceObj => {
-                Object.values(sourceObj).forEach(url => {
-                    const indexIndicator = document.createElement("i");
-                    indexIndicator.textContent = `[${source}] `;
-                    const a = document.createElement('a');
-                    a.href = url;
-                    a.textContent = url;
-                    a.target = '_blank';
-                    sourcesDiv.appendChild(indexIndicator);
-                    sourcesDiv.appendChild(a);
-                    sourcesDiv.appendChild(document.createElement('br'));
-                    source += 1;
-                });
+    jsonIndex = clickedDiv.id;
+    fetch("data/news.json")
+    .then(response => response.json())
+    .then(data => {
+        try {
+        let source = 1;
+        data[jsonIndex].sources.forEach(sourceObj => {
+            Object.values(sourceObj).forEach(url => {
+                const indexIndicator = document.createElement("i");
+                indexIndicator.textContent = `[${source}] `;
+                const a = document.createElement('a');
+                a.href = url;
+                a.textContent = url;
+                a.target = '_blank';
+                sourcesDiv.appendChild(indexIndicator);
+                sourcesDiv.appendChild(a);
+                sourcesDiv.appendChild(document.createElement('br'));
+                source += 1;
             });
-            } catch (error){
-                console.log("error loading sources", error);
-            }
-        })
+        });
+        } catch (error){
+            console.log("error loading sources", error);
+        }
+    })
 
-        document.body.appendChild(sourcesDiv);
-    });
-}
+    document.body.appendChild(sourcesDiv);
+});
+
+
 //filtering
 const filterSubmitButton = document.getElementById("filter-submit-button");
 filterSubmitButton.addEventListener("click", () => {
