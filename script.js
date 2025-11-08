@@ -1,11 +1,13 @@
 //load the uh uh uh the uh um uh the uh news from the uh uh uh the uh um uh the uh JSON file
 const newsContainer = document.getElementById("news");
+const scrollWatcher = document.createElement("div");
+let itemsCreated = 0;
 function createNewsElements(filters, minDate, maxDate){
     fetch('./data/news.json', {cache: "no-store"})
         .then(response => response.json())
         .then(data => {
-            let index = 0;
-            data.forEach(item => {
+            for(var i = itemsCreated; i < itemsCreated + 5; i++){
+                item = data[i];
                     if(filterItems(item, filters, minDate, maxDate)){
                         const container = document.getElementById("news");
                         const newsItem = document.createElement('div');
@@ -27,7 +29,7 @@ function createNewsElements(filters, minDate, maxDate){
                         if(item.mainPlatform == "tweet"){
                             logo.src = "./assets/twitter.png";
                         }
-                        else if(item.mainPlatform == "blog" | item.mainPlatform == "update"){
+                        else if(item.mainPlatform == "blog" || item.mainPlatform == "update"){
                             logo.src = "./assets/hytale.jpeg";
                         }
 
@@ -53,12 +55,18 @@ function createNewsElements(filters, minDate, maxDate){
                         });
 
                         newsItem.className = "news-item";
-                        newsItem.id = index;
+                        newsItem.id = i + itemsCreated;
                         container.appendChild(newsItem);
-                        index += 1;
                     }
-                });
+                };
+                itemsCreated += 5;
+                console.log(itemsCreated);
+                newsContainer.appendChild(scrollWatcher);
+
+                scrollOvserver.unobserve(scrollWatcher);
+                scrollOvserver.observe(scrollWatcher);
             })
+            
 }
 function filterItems(item, filters, minDate, maxDate){
     let createDiv = true;
@@ -88,7 +96,7 @@ function filterItems(item, filters, minDate, maxDate){
         itemDate.setFullYear(parseInt(y));
 
         let setDate = new Date(maxDate);
-        setDate.setTime(setDate.getTime() + 172800000)
+        setDate.setTime(setDate.getTime() + 86400000)
 
         console.log("item date", itemDate, "set date", setDate);
 
@@ -112,6 +120,34 @@ function filterItems(item, filters, minDate, maxDate){
 document.addEventListener("DOMContentLoaded", function() {
     createNewsElements("null", "null", "null");
 });
+
+//load more when scrollWatcher is in view
+const scrollOvserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const form = document.getElementById("filterForm");
+                const children = form.children;
+                let selectedTags = [];
+                console.log(children);
+                for(let child of children){
+                    if(child.nodeName == "INPUT"){
+                        console.log(child.id);
+                        if(child.checked){
+                            selectedTags.push(child.id);
+                        }
+                    }
+                }
+                const minDate = document.getElementById("min-date-input").value;
+                const maxDate = document.getElementById("max-date-input").value;
+                createNewsElements(selectedTags, minDate, maxDate);
+            }
+        });
+    }, {
+        rootMargin: '200px'
+})
+
+scrollOvserver.observe(scrollWatcher);
+
 //sources
 newsContainer.addEventListener("click", function(event) {
     try {
@@ -217,6 +253,7 @@ filterSubmitButton.addEventListener("click", () => {
     while(datesToRemove[0]){
         datesToRemove[0].remove();
     }
+    itemsCreated = 0;
     if(selectedTags.length == 0){
         createNewsElements("null", minDate, maxDate);
     }
