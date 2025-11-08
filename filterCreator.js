@@ -33,6 +33,17 @@ filterDropdown.addEventListener("click", () => {
 })
 filterDropdown.click();
 
+const clearButton = document.getElementById("clear-filters")
+clearButton.addEventListener("click", () => {
+const children = form.children;
+for(let child of children){
+    if(child.nodeName == "INPUT"){
+        child.checked = false;
+    }
+}
+})
+
+
 function clickingLabelClicksBox(input, label){
     label.addEventListener("click", () => {
         if(input.checked == false){
