@@ -71,7 +71,7 @@ function createNewsElements(filters, minDate, maxDate){
                         });
 
                         newsItem.className = "news-item";
-                        newsItem.id = `${i + itemsCreated}-${yearToGetJson}`;
+                        newsItem.id = `${i}-${yearToGetJson}`;
                         container.appendChild(newsItem);
                     }
                 };
@@ -234,7 +234,7 @@ newsContainer.addEventListener("click", function(event) {
     const jsonYear= jsonInfo.split("-")[1];
     
     caches.open("jsonCache").then((cache) => {
-        return cache.match(`./data/news/${yearToGetJson}.json`);
+        return cache.match(`./data/news/${jsonYear}.json`);
     })
     .then(response => response.json())
     .then(data => {
@@ -256,6 +256,9 @@ newsContainer.addEventListener("click", function(event) {
         });
         } catch (error){
             console.log("error loading sources", error);
+            const errorMessage = document.createElement("p");
+            errorMessage.textContent = "hmmm, we had issues loading that. . . Either we forgot to put sources (sorry about that) or the was a bug in the code (sorry from the dev), if the problem persists, please let us know";
+            sourcesDiv.appendChild(errorMessage);
         }
     })
 
