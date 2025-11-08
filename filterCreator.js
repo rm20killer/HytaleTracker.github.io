@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const h3 = document.createElement("h3");
     h3.textContent = "Tags: ";
     form.appendChild(h3);
-    fetch("/data/tags.json")
+    fetch("/data/tags.json", {cache: "no-store"})
     .then(response => response.json())
     .then(data => {
         data.forEach(tag => {
@@ -23,12 +23,15 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 const filterDropdown = document.getElementById("filterDropdown");
 const formDiv = document.getElementById("filters");
+const dateDiv = document.getElementById("date-filter");
 filterDropdown.addEventListener("click", () => {
     if(formDiv.style.display == "none"){
-        formDiv.style.display = "inherit";
+        formDiv.style.display = "inline-block";
+        dateDiv.style.display = "inline-block";
     }
     else{
         formDiv.style.display = "none";
+        dateDiv.style.display = "none";
     }
 })
 filterDropdown.click();
@@ -41,6 +44,12 @@ for(let child of children){
         child.checked = false;
     }
 }
+})
+
+const clearDateButton = document.getElementById("clear-dates");
+clearDateButton.addEventListener("click", () => {
+    document.getElementById("min-date-input").value = "";
+    document.getElementById("max-date-input").value = "";
 })
 
 

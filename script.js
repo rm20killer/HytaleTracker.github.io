@@ -1,34 +1,25 @@
 //load the uh uh uh the uh um uh the uh news from the uh uh uh the uh um uh the uh JSON file
 const newsContainer = document.getElementById("news");
-function createNewsElements(filters){
-    fetch('./data/news.json')
+function createNewsElements(filters, minDate, maxDate){
+    fetch('./data/news.json', {cache: "no-store"})
         .then(response => response.json())
         .then(data => {
             let index = 0;
             data.forEach(item => {
-                let createDiv = true;
-                if(filters != "null"){
-                    filters.forEach(filter => {
-                        console.log(filter);
-                        if(!item.tags.includes(filter)){
-                            createDiv = false;
-                            console.log(filter);
-                        }
-                    })
-                } else{
-                    createDiv = true;
-                }
-                    if(createDiv == true){
+                    if(filterItems(item, filters, minDate, maxDate)){
                         const container = document.getElementById("news");
                         const newsItem = document.createElement('div');
                         const mainText = document.createElement('p');
                         const summary = document.createElement('h2');
                         const logo = document.createElement('img');
 
+                        var months = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
+                        var dateArray = item.date.split(" ");
+
                         const hr = document.createElement('hr');
                         const date = document.createElement("h3");
                         date.className = "date";
-                        date.textContent = item.date;
+                        date.textContent = `${months[dateArray[0] - 1]} ${dateArray[1]} ${dateArray[2]}`;
                         container.appendChild(date);
                         hr.className = "divider";
                         container.appendChild(hr);
@@ -69,9 +60,57 @@ function createNewsElements(filters){
                 });
             })
 }
+function filterItems(item, filters, minDate, maxDate){
+    let createDiv = true;
+    if (minDate != "null") {
+        const [m, d, y] = item.date.split(" ");
+
+        let itemDate = new Date();
+        itemDate.setMonth(parseInt(m) - 1);
+        itemDate.setDate(parseInt(d));
+        itemDate.setFullYear(parseInt(y));
+
+        let setDate = new Date(minDate);
+        setDate.setTime(setDate.getTime() + 86400000)
+
+        console.log("item date", itemDate, "set date", setDate);
+
+        if (itemDate.getTime() < setDate.getTime()) {
+            return false;
+        }
+    }
+    if (maxDate != "null") {
+        const [m, d, y] = item.date.split(" ");
+
+        let itemDate = new Date();
+        itemDate.setMonth(parseInt(m) - 1);
+        itemDate.setDate(parseInt(d));
+        itemDate.setFullYear(parseInt(y));
+
+        let setDate = new Date(maxDate);
+        setDate.setTime(setDate.getTime() + 172800000)
+
+        console.log("item date", itemDate, "set date", setDate);
+
+        if (itemDate.getTime() > setDate.getTime()) {
+            return false;
+        }
+    }
+
+    if(filters != "null"){
+        filters.forEach(filter => {
+            console.log(filter);
+            if(!item.tags.includes(filter)){
+                createDiv = false;
+                console.log(filter);
+            }
+        })
+    }
+    return createDiv;
+}
 
 document.addEventListener("DOMContentLoaded", function() {
-    createNewsElements("null");
+    createNewsElements("null", "null", "null");
 });
 //desktop sources
 if(innerWidth > innerHeight){
@@ -159,6 +198,8 @@ filterSubmitButton.addEventListener("click", () => {
     const newsItemsToRemove = document.getElementsByClassName("news-item");
     const dividersToRemove = document.getElementsByClassName("divider");
     const datesToRemove = document.getElementsByClassName("date");
+    const minDate = document.getElementById("min-date-input").value;
+    const maxDate = document.getElementById("max-date-input").value;
     while(newsItemsToRemove[0]){
         newsItemsToRemove[0].remove();
     }
@@ -169,10 +210,10 @@ filterSubmitButton.addEventListener("click", () => {
         datesToRemove[0].remove();
     }
     if(selectedTags.length == 0){
-        createNewsElements("null");
+        createNewsElements("null", minDate, maxDate);
     }
     else{
         console.log("creating news elements with filter");
-        createNewsElements(selectedTags);
+        createNewsElements(selectedTags, minDate, maxDate);
     }
 })
