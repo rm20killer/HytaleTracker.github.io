@@ -68,11 +68,15 @@ function createCommunityElements(filters, minDate, maxDate){
                     yearToGetJson -= 1;
                     
                     if(yearToGetJson > 2015){
-                        caches.open("communityJsonCache").then((cache) => {
-                            cache.add(`./data/community/${yearToGetJson}.json`);
-                        })
-                        itemsCreated = 0;
-                        createCommunityElements(filters, minDate, maxDate);
+                        caches.open("communityJsonCache")
+                        .then(cache => {
+                            return fetch(`./data/community/${yearToGetJson}.json`, { cache: "no-store" })
+                                .then(response => cache.put(`./data/community/${yearToGetJson}.json`, response.clone()))
+                                .then(() => {
+                                    itemsCreated = 0;
+                                    createCommunityElements(filters, minDate, maxDate);
+                                });
+                        });
                     }else{
                         console.log("ran out of items to load", yearToGetJson);
                     }
@@ -131,12 +135,15 @@ function filterItems(item, filters, minDate, maxDate){
     return createDiv;
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    caches.open("communityJsonCache")
-    .then(cache => cache.add(`./data/community/${yearToGetJson}.json`))
-    .then(() => {
-        createCommunityElements("null", "null", "null");
-    });
+window.addEventListener("load", async function() {
+    await caches.delete('communityJsonCache');
+
+    const cache = await caches.open("communityJsonCache");
+
+    const response = await fetch(`./data/community/${yearToGetJson}.json`, { cache: "no-store" });
+    await cache.put(`./data/community/${yearToGetJson}.json`, response.clone());
+
+    createCommunityElements("null", "null", "null");
 });
 
 //load more when scrollWatcher is in view
@@ -289,18 +296,4 @@ filterSubmitButton.addEventListener("click", () => {
         console.log("creating news elements with filter");
         createCommunityElements(selectedTags, minDate, maxDate);
     }
-})
-
-//delete cache before page unload
-
-window.addEventListener("beforeunload", () => {
-caches.delete('communityJsonCache').then((deleted) => {
-    if (deleted) {
-        console.log('Cache deleted successfully.');
-    } else {
-        console.log('Cache not found or could not be deleted.');
-    }
-}).catch((error) => {
-    console.error('Error deleting cache:', error);
-});
 })

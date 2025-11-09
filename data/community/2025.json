@@ -3,6 +3,7 @@
         "image": "./assets/Hytale.jpg",
         "main-text": "lorem ipsum",
         "link": "google.com",
+        "date": "8 28 2025",
         "tags": ["example", "lorem ipsum"]
     }
 ]

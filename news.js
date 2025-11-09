@@ -85,11 +85,16 @@ function createNewsElements(filters, minDate, maxDate){
                     yearToGetJson -= 1;
                     
                     if(yearToGetJson > 2015){
-                        caches.open("jsonCache").then((cache) => {
-                            cache.add(`./data/news/${yearToGetJson}.json`);
-                        })
-                        itemsCreated = 0;
-                        createNewsElements(filters, minDate, maxDate);
+                        caches.open("jsonCache")
+                        .then(cache => {
+                            return fetch(`./data/news/${yearToGetJson}.json`, { cache: "no-store" })
+                                .then(response => cache.put(`./data/news/${yearToGetJson}.json`, response.clone()))
+                                .then(() => {
+                                    itemsCreated = 0;
+                                    createNewsElements(filters, minDate, maxDate);
+                                });
+                        });
+
                     }else{
                         console.log("ran out of items to load", yearToGetJson);
                     }
@@ -148,14 +153,17 @@ function filterItems(item, filters, minDate, maxDate){
     return createDiv;
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    caches.open("jsonCache")
-    .then(cache => cache.add(`./data/news/${yearToGetJson}.json`))
-    .then(() => {
-        createNewsElements("null", "null", "null");
-    });
+window.addEventListener("load", async function() {
+    await caches.delete('jsonCache');
 
+    const cache = await caches.open("jsonCache");
+
+    const response = await fetch(`./data/news/${yearToGetJson}.json`, { cache: "no-store" });
+    await cache.put(`./data/news/${yearToGetJson}.json`, response.clone());
+
+    createNewsElements("null", "null", "null");
 });
+
 
 //load more when scrollWatcher is in view
 const scrollObvserver = new IntersectionObserver(entries => {
@@ -307,18 +315,4 @@ filterSubmitButton.addEventListener("click", () => {
         console.log("creating news elements with filter");
         createNewsElements(selectedTags, minDate, maxDate);
     }
-})
-
-//delete cache before page unload
-
-window.addEventListener("beforeunload", () => {
-caches.delete('jsonCache').then((deleted) => {
-    if (deleted) {
-        console.log('Cache deleted successfully.');
-    } else {
-        console.log('Cache not found or could not be deleted.');
-    }
-}).catch((error) => {
-    console.error('Error deleting cache:', error);
-});
 })
