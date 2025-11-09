@@ -4,7 +4,8 @@
 }
 @media (min-width: 800px){
     .community-item{
-        background-color: #ececec;
+        background-color: #ffffff;
+        border: 5px solid rgb(85, 85, 85);
         padding: 10px;
         border-radius: 10px;
         text-align: center;
@@ -54,18 +55,24 @@
     }
     .tag{
         display: inline-block;
-        background-color: #c5c5c5;
         color: rgb(0, 0, 0);
         padding: 2px 8px;
         margin: 5px 5px 0 0;
         border-radius: 10px;
         font-size: 0.8em;
     }
+    button{
+        background-color: #c5c5c5;
+        border: none;
+        border-radius: 10px;
+        padding: 5px
+    }
     hr{
         width: 25%;
     }
     #sources-div{
-        background-color: #c5c5c5;
+        background-color: #ffffff;
+        border: 5px solid rgb(85, 85, 85);
         height: fit-content;
         width: 25%;
         border-radius: 10px;
@@ -83,6 +90,9 @@
         width: 100%;
     }
 }
+label{
+    border-radius: 5px;
+}
 body{
     font-family: "poppins";
 }
@@ -91,8 +101,9 @@ body{
     color: black;
 }
 #filters{
+    border: 5px solid rgb(85, 85, 85);
     display: none;
-    background-color: #d6d6d6;
+    background-color: #ffffff;
     width: fit-content;
     height: fit-content;
     border-radius: 10px;
@@ -111,7 +122,8 @@ body{
 }
 #date-filter{
     display: none;
-    background-color: #d6d6d6;
+    background-color: #ffffff;
+    border: 5px solid rgb(85, 85, 85);
     width: fit-content;
     height: fit-content;
     border-radius: 10px;
@@ -137,6 +149,20 @@ body{
 }
 @media (max-width: 800px), (orientation: portrait){
     /* mobile devices */
+    .community-item{
+        background-color: #ffffff;
+        border: 5px solid rgb(85, 85, 85);
+        padding: 10px;
+        border-radius: 10px;
+        text-align: center;
+        margin: 10px;
+        margin-top: 10px;
+        display: inline-block;
+        width: calc(100% - 40px);
+        height: 800px;
+        vertical-align: top;
+        overflow-y: scroll;
+    }
     #navbar{
         background-color: #b1caff;
         width: calc(100% - padding)px;
@@ -166,7 +192,6 @@ body{
     }
     .tag{
         display: inline-block;
-        background-color: #c5c5c5;
         color: rgb(0, 0, 0);
         padding: 2px 8px;
         margin: 5px 5px 0 0;
@@ -174,7 +199,8 @@ body{
         font-size: 0.8em;
     }
     #sources-div{
-        background-color: #c5c5c5;
+        background-color: #ffffff;
+        border: 5px solid rgb(85, 85, 85);
         height: fit-content;
         width: 90%;
         border-radius: 10px;

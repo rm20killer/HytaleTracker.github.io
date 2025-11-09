@@ -58,6 +58,16 @@ function createCommunityElements(filters, minDate, maxDate){
                             const tag = document.createElement('span');
                             tag.className = "tag";
                             tag.textContent = tagText;
+                            try{
+                                fetch("./data/tags.json")
+                                .then(response => response.json())
+                                .then(tagData => {
+                                    tag.style.backgroundColor = tagData[2].colors[0][tagText] || "#c5c5c5";
+                                })
+                            }catch(error){
+                                console.error("error loading tag color from json", error);
+                                tag.style.backgroundColor = "#c5c5c5";
+                            }
                             communityItem.appendChild(tag);
                         });
 

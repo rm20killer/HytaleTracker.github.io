@@ -17,6 +17,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 const label = document.createElement("label");
                 label.for = tag;
                 label.textContent = tag;
+                try{
+                    fetch("./data/tags.json")
+                    .then(response => response.json())
+                    .then(tagData => {
+                        label.style.backgroundColor = tagData[2].colors[0][tag] || "#ffffffff";
+                    })
+                }catch(error){
+                    console.error("error loading tag color from json", error);
+                    tag.style.backgroundColor = "#ffffffff";
+                }
                 form.appendChild(input);
                 form.appendChild(label);
                 form.appendChild(document.createElement("br"));
@@ -32,6 +42,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 const label = document.createElement("label");
                 label.for = tag;
                 label.textContent = tag;
+                try{
+                    fetch("./data/tags.json")
+                    .then(response => response.json())
+                    .then(tagData => {
+                        label.style.backgroundColor = tagData[2].colors[0][tag] || "#ffffffff";
+                    })
+                }catch(error){
+                    console.error("error loading tag color from json", error);
+                    tag.style.backgroundColor = "#ffffffff";
+                }
                 form.appendChild(input);
                 form.appendChild(label);
                 form.appendChild(document.createElement("br"));
