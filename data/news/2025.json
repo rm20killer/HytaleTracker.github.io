@@ -1,6 +1,38 @@
 [
     {
         "mainPlatform": "tweet",
+        "summary": "Simon discusses proximity chat/other features.",
+        "mainText": "Simon states that proximity voice chat in Hytale was experimented on in '17-'18, and he was a big believer in the feature, and believes it would open many doors to new gameplay experiences. While he can't commit to split-screen functionality, Simon says that Hytale had lots of great unique features that are now considered common in other games.",
+        "date": "07 15 2025",
+        "tags": [
+            "Simon",
+            "Post-Cancellation",
+            "Servers",
+            "Modding"
+        ],
+        "sources": [
+            {
+                "1": [
+                    "Proximity VC",
+                    "https://xcancel.com/Simon_Hypixel/status/1945158707890761889"
+                ]
+            },
+            {
+                "2": [
+                    "New experiences",
+                    "https://xcancel.com/Simon_Hypixel/status/1945163431939629382"
+                ]
+            },
+            {
+                "3": [
+                    "Once unique, now common",
+                    "https://xcancel.com/Simon_Hypixel/status/1945162339809919387"
+                ]
+            }
+        ]
+    },
+    {
+        "mainPlatform": "tweet",
         "summary": "Simon explains why Hytale servers were Java-based / original drive for Hytale.",
         "mainText": "Simon says that the reason Hytale servers are Java-based is due to the size of the Minecraft server/modding ecosystem, which fostered a very specific hiring pool with lots of dedicated developers. The original drive for Hytale was to build Hypixel's dream platform and a game alongside it, and then to share the tools / platform with others!",
         "date": "07 07 2025",
@@ -190,7 +222,7 @@
     },
     {
         "mainPlatform": "tweet",
-        "summary": "Simon's first statement on Hytale, post-cancellation",
+        "summary": "Simon's first statement on Hytale, post-cancellation.",
         "mainText": "During Simon's time working on Hytale ('16-'19), Hytale was <= 2 years from PC release. Simon states that the team was locked in and momentum was insane, with the game shaping up fast towards release. The attention and pressure that the Riot Games label + the trailer put pressure on the team, and Simon felt he couldn't live up to the new expectations - and thus left the team. Simon says Riot was good to him when he left, and gave freedom to the team, and he even turned down 'way more' money from a different company at the last moment because he truly believed Riot Games gave the team/game the best chance of success.",
         "date": "6 25 2025",
         "tags": [
@@ -209,7 +241,7 @@
     },
     {
         "mainPlatform": "tweet",
-        "summary": "Simon discusses the unique feeling of Hytale",
+        "summary": "Simon discusses the unique feeling of Hytale.",
         "mainText": "Simon says the music/art/sounds of Hytale created an immersive, beautiful world - even 5+ years ago. He describes it as a 'unique artistic experience' that he hadn't experienced before in games in the same genre. He says Riot didn't offer to sell Hytale back to him, as they were likely looking for someone who could support the expenses of the team for years to come.",
         "date": "6 25 2025",
         "tags": [
