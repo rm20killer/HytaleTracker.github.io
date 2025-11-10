@@ -16,7 +16,7 @@ function createNewsElements(filters, minDate, maxDate){
         .then(response => response.json())
         .then(data => {
             let skippedItems = 0;
-            for(var i = itemsCreated; i < itemsCreated + 5; i++){
+            for(let i = itemsCreated; i < itemsCreated + 5; i++){
                 if (i >= data.length) {
                     throw new Error("NEXT_YEAR");
                 }
@@ -91,13 +91,16 @@ function createNewsElements(filters, minDate, maxDate){
                         skippedItems += 1;
                     }
                 };
-                itemsCreated += 5 - skippedItems;
+
+                itemsCreated += 5;   
+
                 console.log(itemsCreated);
                 newsContainer.appendChild(scrollWatcher);
 
                 scrollObvserver.unobserve(scrollWatcher);
                 scrollObvserver.observe(scrollWatcher);
             })
+            
             .catch(error => {
                 if(error.message == "NEXT_YEAR"){
                     console.error(error);
@@ -122,7 +125,8 @@ function createNewsElements(filters, minDate, maxDate){
                 else{
                     console.error(error);
                 }
-            })    
+            });
+             
 }
 function filterItems(item, filters, minDate, maxDate){
     let createDiv = true;
