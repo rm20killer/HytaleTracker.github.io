@@ -1,6 +1,50 @@
 [
     {
         "mainPlatform": "tweet",
+        "summary": "Simon discusses potential early access tiers, E.A. day one.",
+        "mainText": "Simon floats the idea of having 2/3 tiers of Early Access support - T1 being lower price for people who want to try the game, T2 having cosmetics for supporting, and T3 having multiple access keys + extra cosmetics. Alongside a creative mode, Early Access Day One would likely have a very barebones survival mode (with great exploration), with Adventure (Story) Mode coming later down the line when there is more content and a more complete survival gameplay loop. Players would be able to host their own servers, but no official server/minigames on day one.",
+        "date": "07 24 2025",
+        "tags": [
+            "Simon",
+            "Post-Cancellation",
+            "Early Access",
+            "Servers"
+        ],
+        "sources": [
+            {
+                "1": [
+                    "Early Access tiers",
+                    "https://xcancel.com/Simon_Hypixel/status/1948579696330809423"
+                ]
+            },
+            {
+                "2": [
+                    "Multiple copies for T3",
+                    "https://xcancel.com/Simon_Hypixel/status/1948580878352871912"
+                ]
+            },
+            {
+                "3": [
+                    "Surv/Creative, then Adventure",
+                    "https://xcancel.com/Simon_Hypixel/status/1948570389061238838"
+                ]
+            },
+            {
+                "4": [
+                    "Barebones Surv, great exploration",
+                    "https://xcancel.com/Simon_Hypixel/status/1948571632135528491"
+                ]
+            },
+            {
+                "5": [
+                    "Player-hosted servers",
+                    "https://xcancel.com/Simon_Hypixel/status/1948572525014712482"
+                ]
+            }
+        ]
+    },
+    {
+        "mainPlatform": "tweet",
         "summary": "Simon updates on Proximity Chat, discusses community created experiences.",
         "mainText": "After discussing with a ex-Hytale dev, Simon reports that it's possible to add proximity voice chat back to the game, and personally says he will personally make sure it happens because of the potential fun and chaos it could add, and because (when combined with climbing/vaulting mechanics) it could easily enable a Peak-like minigame -- another reason to get the community involved and able to make custom maps/mods early on.",
         "date": "07 24 2025",
