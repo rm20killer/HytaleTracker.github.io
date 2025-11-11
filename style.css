@@ -206,7 +206,7 @@ body{
         width: 90%;
         border-radius: 10px;
         padding: 10px;
-        text-align: center;
+        text-align: right;
     }
     .xButton{
         float: right;
