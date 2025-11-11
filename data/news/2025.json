@@ -1,6 +1,49 @@
 [
     {
         "mainPlatform": "tweet",
+        "summary": "Simon discusses Story/Adventure mode content.",
+        "mainText": "While Simon admits he doesn't know much about the story/lore and has no final answer on if Adventure mode and Survival mode would be separate, he believes there's a way for story content to be added to pre-existing worlds -- potentially in chapters slowly releasing over time, as he isn't sure if a single story quest was done.",
+        "date": "07 25 2025",
+        "tags": [
+            "Simon",
+            "Post-Cancellation",
+            "Lore"
+        ],
+        "sources": [
+            {
+                "1": [
+                    "Simon's Lore knowledge",
+                    "https://xcancel.com/Simon_Hypixel/status/1948911010435236096"
+                ]
+            },
+            {
+                "2": [
+                    "Adv vs Survival mode",
+                    "https://xcancel.com/Simon_Hypixel/status/1948720559224676802"
+                ]
+            },
+            {
+                "3": [
+                    "Story adding to pre-existing worlds",
+                    "https://xcancel.com/Simon_Hypixel/status/1948723275741241696"
+                ]
+            },
+            {
+                "4": [
+                    "Story added slowly, in chapters",
+                    "https://xcancel.com/Simon_Hypixel/status/1948716301918056876"
+                ]
+            },
+            {
+                "5": [
+                    "Completion Status of Quests/Story",
+                    "https://xcancel.com/Simon_Hypixel/status/1948721395745046899"
+                ]
+            }
+        ]
+    },
+    {
+        "mainPlatform": "tweet",
         "summary": "Simon discusses Hytale features + living world.",
         "mainText": "According to Simon, Hytale has an instanced dungeon system in Legacy Engine, which would enable insane amounts of content, just like the Proximity VC and the Cinema system (which was apparently removed in new engine) would. When asked about social systems, Simon affirms support for friends system (potentially on Day 1) and other social systems. When asked about the world, Simon says having a 'living world' is critical, with wind sounds/visuals and NPCs changing behavior (partially) based on time/weather. Wanting to avoid formal tutorials, Simon expresses love for charm/mechanics that create player stories, describing a scenario where taking care of a wounded animal could teach the basics of survival - likely post-launch.",
         "date": "07 25 2025",
