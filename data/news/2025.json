@@ -1,6 +1,31 @@
 [
     {
         "mainPlatform": "tweet",
+        "summary": "Simon discusses the 2016 trailer.",
+        "mainText": "According to Simon, some features in the trailer were broken/in early development, but most of it was easily fixable. Everything was filmed using in-game cinematic tools, which allowed placement of cameras and usage of events (like the dragon shot at the end). Simon says cinematic tools were invested in because the team understands how important YouTube is to a game's success. Some shots in the trailer were scripted, due to lack of players, and NPCs were used to make it feel more alive - specifically the minigames and end shot in the trailer. Simon notes three specific features: #1 being the mounts & hot air balloon, which used a band-aid solution, but could be fixed in a couple of weeks and might have been done already, #2 being minecarts with jumping not being implemented, and #3 being the World Map which was using a better UI than what was in-game at the time. After the trailer's release, the features shown were top priority to be completed. Simon clarifies that the trailer was faithful to the game and vision in 2018, and explains that the cinema tools allowed users to record their actions and play it back.",
+        "date": "08 06 2025",
+        "tags": [
+            "Statement",
+            "Simon",
+            "Post-Cancellation"
+        ],
+        "sources": [
+            {
+                "1": [
+                    "2016 Trailer discussion.",
+                    "https://xcancel.com/Simon_Hypixel/status/1953263277682651544"
+                ]
+            },
+            {
+                "2": [
+                    "In-game recording tools.",
+                    "https://xcancel.com/Simon_Hypixel/status/1953264783366512787"
+                ]
+            }
+        ]
+    },
+    {
+        "mainPlatform": "tweet",
         "summary": "Simon discusses Survival/Adventure mode, alterverses.",
         "mainText": "In a series of tweets, Simon talks about how Survival mode probably isn't balanced at the moment and might lack features, but it might be okay because it creates a blank canvas with a lot of content, with the game slowly coming together over rapid updates. Pivoting to alterverses, Simon reveals he discussed with a former Hytale designer about how Hytale's alterverses could work - potentially being added after the base game is good, and releasing with new story chapters, dungeons, blocks, weapons, and armor tiers, almost like how World of Warcraft handles expansions.",
         "date": "08 04 2025",
