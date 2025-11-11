@@ -1,6 +1,56 @@
 [
     {
         "mainPlatform": "tweet",
+        "summary": "Simon discusses Hytale's popularity, minigames, and Day 1 possibilities.",
+        "mainText": "When asked about potentially returning to Hytale's popularity in '19, Simon says that popularity doesn't matter much as long as the funding to continue updates is still there, as a good game attracts players naturally - though he mentions a hypothetical free minigame-only version could be used to attract players. Continuing that sentiment, Simon states he doesn't care about how much polished content is already in the game, as the community would help polish it over the years. Turning to servers, Simon reveals that he believes most Hypixel classic minigames were cancelled in Hytale's new direction, but with Day 1 player-hosted servers and an eventual Servers Tab, minigames would be created by the community - potentially aided by official prototypes/maps. The average player could aid the game by reporting bugs, requesting features, creating content, and generally participating in the community.",
+        "date": "08 02 2025",
+        "tags": [
+            "Simon",
+            "Post-Cancellation",
+            "Community",
+            "Servers"
+        ],
+        "sources": [
+            {
+                "1": [
+                    "Popularity, potential free minigame-only version.",
+                    "https://xcancel.com/Simon_Hypixel/status/1951685343222153267"
+                ]
+            },
+            {
+                "2": [
+                    "Polished content.",
+                    "https://xcancel.com/Simon_Hypixel/status/1951682983250763953"
+                ]
+            },
+            {
+                "3": [
+                    "Hypixel Classics.",
+                    "https://xcancel.com/Simon_Hypixel/status/1951682770956087528"
+                ]
+            },
+            {
+                "4": [
+                    "Player servers, minigames.",
+                    "https://xcancel.com/Simon_Hypixel/status/1951689542588576009"
+                ]
+            },
+            {
+                "5": [
+                    "Servers Tab.",
+                    "https://xcancel.com/Simon_Hypixel/status/1951692305838043572"
+                ]
+            },
+            {
+                "6": [
+                    "Getting involved.",
+                    "https://xcancel.com/Simon_Hypixel/status/1951697482397749359"
+                ]
+            }
+        ]
+    },
+    {
+        "mainPlatform": "tweet",
         "summary": "Simon comments on feedback/requests for building tools.",
         "mainText": "Responding to Hawkon's Hytale building tools video, Simon confirms that Legacy Hytale already has hotbar-swapping in Creative mode, and he agrees with most of the suggestions about the menus. Simon also discusses the suggested Ghost Mode feature, saying no-clip options already exist - saying he has experienced the frustration of no-clip mode still triggering redstone in Minecraft. Speaking on the video as a whole, Simon says it's the type of video that the developers would watch to understand the needs of creatives and implement them.",
         "date": "07 31 2025",
