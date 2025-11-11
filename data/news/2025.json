@@ -1,6 +1,38 @@
 [
     {
         "mainPlatform": "tweet",
+        "summary": "Simon comments more on Early Access plans.",
+        "mainText": "Simon believes the game will eventually be good enough that it won't need a disclaimer about the history, but he'd include a disclaimer and a roadmap explanation early on. The Lore/Story wouldn't be included in early releases, and it'd be implemented into adventure mode using the dungeon/quest systems - but no promises.",
+        "date": "08 10 2025",
+        "tags": [
+            "Simon",
+            "Post-Cancellation",
+            "Community",
+            "Lore"
+        ],
+        "sources": [
+            {
+                "1": [
+                    "History Disclaimer.",
+                    "https://xcancel.com/Simon_Hypixel/status/1954614319494119826"
+                ]
+            },
+            {
+                "2": [
+                    "Disclaimer/Roadmap.",
+                    "https://xcancel.com/Simon_Hypixel/status/1954613317886185950"
+                ]
+            },
+            {
+                "3": [
+                    "No Lore/Story in-game in early access.",
+                    "https://xcancel.com/Simon_Hypixel/status/1954643138271740390"
+                ]
+            }
+        ]
+    },
+    {
+        "mainPlatform": "tweet",
         "summary": "Simon discusses the 2016 trailer.",
         "mainText": "According to Simon, some features in the trailer were broken/in early development, but most of it was easily fixable. Everything was filmed using in-game cinematic tools, which allowed placement of cameras and usage of events (like the dragon shot at the end). Simon says cinematic tools were invested in because the team understands how important YouTube is to a game's success. Some shots in the trailer were scripted, due to lack of players, and NPCs were used to make it feel more alive - specifically the minigames and end shot in the trailer. Simon notes three specific features: #1 being the mounts & hot air balloon, which used a band-aid solution, but could be fixed in a couple of weeks and might have been done already, #2 being minecarts with jumping not being implemented, and #3 being the World Map which was using a better UI than what was in-game at the time. After the trailer's release, the features shown were top priority to be completed. Simon clarifies that the trailer was faithful to the game and vision in 2018, and explains that the cinema tools allowed users to record their actions and play it back.",
         "date": "08 06 2025",
