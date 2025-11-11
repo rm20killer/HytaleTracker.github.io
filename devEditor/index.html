@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hytale Tracker UI</title>
+        <link rel="stylesheet" type="text/css" href="./style.css">
+    </head>
+    <body>
+        <div id="nav">
+            <a href="./tags.html">Tags</a>
+            <a href="./community.html">Community</a>
+        </div>
+        <div id="input"></div>
+            <h2>Input current data (copy + paste from github)</h2>
+            <textarea id="current"></textarea>
+
+            <h2>Main platform</h2>
+            <input type="radio" name="main" value="tweet" id="tweet"><label for="tweet">twitter</label>
+            <input type="radio" name="main" value="blog" id="blog"><label for="blog">blog</label>
+            <input type="radio" name="main" value="update" id="update"><label for="update">update</label>
+
+            <h2>headline</h2>
+            <textarea id="headline"></textarea>
+
+            <h2>summary</h2>
+            <textarea id="summary"></textarea>
+
+            <h2>date</h2>
+            <input type="date" id="date">
+
+            <h2>tags</h2>
+            <form id="tagsForm">
+                
+            </form>
+
+            <h2>Sources</h2>
+            <button id="new-source">New Source</button>
+            <button id="remove-source">Remove source</button>
+            <br>
+            <hr>
+            <button id="create">Create</button><br>
+        </div>
+        <textarea id="preview">
+
+        </textarea><br>
+        <button id = "copyOutput">
+            copy output
+        </button>
+
+        <script src="script.js"></script>
+    </body>
+</html>

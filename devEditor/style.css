@@ -1,0 +1,27 @@
+textarea{
+    width: 70%;
+    height: 10vh;
+}
+body{
+    background-color: rgb(65, 65, 65);
+    color: white;
+    border-color: rgb(65, 65, 65);
+}
+a{
+    color: aquamarine;
+}
+textarea{
+    background-color: rgb(65, 65, 65);
+    border-color: white;
+    color: white;
+}
+button{
+    background-color: rgb(65, 65, 65);
+    border-color: white;
+    color: white;
+}
+input{
+    background-color: rgb(65, 65, 65);
+    border-color: white;
+    color: white;
+}
