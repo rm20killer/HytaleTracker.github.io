@@ -1,7 +1,75 @@
 [
     {
         "mainPlatform": "tweet",
-        "summary": "Simon discusses Legacy Engine details + launcher info",
+        "summary": "Simon discusses Hytale features + living world.",
+        "mainText": "According to Simon, Hytale has an instanced dungeon system in Legacy Engine, which would enable insane amounts of content, just like the Proximity VC and the Cinema system (which was apparently removed in new engine) would. When asked about social systems, Simon affirms support for friends system (potentially on Day 1) and other social systems. When asked about the world, Simon says having a 'living world' is critical, with wind sounds/visuals and NPCs changing behavior (partially) based on time/weather. Wanting to avoid formal tutorials, Simon expresses love for charm/mechanics that create player stories, describing a scenario where taking care of a wounded animal could teach the basics of survival - likely post-launch.",
+        "date": "07 25 2025",
+        "tags": [
+            "Simon",
+            "Post-Cancellation",
+            "Features",
+            "Engine"
+        ],
+        "sources": [
+            {
+                "1": [
+                    "Instanced dungeons",
+                    "https://xcancel.com/Simon_Hypixel/status/1948699214000590867"
+                ]
+            },
+            {
+                "2": [
+                    "Prox VC + cinema",
+                    "https://xcancel.com/Simon_Hypixel/status/1948700121287303456"
+                ]
+            },
+            {
+                "3": [
+                    "Friends System",
+                    "https://xcancel.com/Simon_Hypixel/status/1948706566665859513"
+                ]
+            },
+            {
+                "4": [
+                    "Social is key",
+                    "https://xcancel.com/Simon_Hypixel/status/1948708097070911713"
+                ]
+            },
+            {
+                "5": [
+                    "Living World",
+                    "https://xcancel.com/Simon_Hypixel/status/1948905760269946982"
+                ]
+            },
+            {
+                "6": [
+                    "NPC behavior",
+                    "https://xcancel.com/Simon_Hypixel/status/1948909891869180323"
+                ]
+            },
+            {
+                "7": [
+                    "Wind",
+                    "https://xcancel.com/Simon_Hypixel/status/1948910801504673887"
+                ]
+            },
+            {
+                "8": [
+                    "Player Stories",
+                    "https://xcancel.com/Simon_Hypixel/status/1948920147407700109"
+                ]
+            },
+            {
+                "9": [
+                    "Wounded Animal",
+                    "https://xcancel.com/Simon_Hypixel/status/1948918893352816893"
+                ]
+            }
+        ]
+    },
+    {
+        "mainPlatform": "tweet",
+        "summary": "Simon discusses Legacy Engine details + launcher info.",
         "mainText": "In a day full of tweets, Simon states that Hytale's legacy engine (C# client, Java backend) has options for cross-play, which would need to be looked into, and plugins/modding 'probably' work both like Minecraft's Java plugins + the scripting, which was shown in the original trailer. Java is used for the backend because it aids in speed of development, enables developers to be trained more easily, and already has a massive server/modding community. Additionally, Simon says he'd try to make parts of the game shared source or open source, with a bounty system for bugs/features. When asked about a launcher, Simon explains that the game would be updated very frequently, making an independent launcher ideal initially - though Simon believes a Steam release would be best down the line (following in Path of Exile's footsteps), with a goal being Hytale on the Steam Deck (with Windows/Mac support confirmed + Linux potentially being possible). Of course, Custom Input Support would also be ideal.",
         "date": "07 25 2025",
         "tags": [
