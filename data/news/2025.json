@@ -1,6 +1,81 @@
 [
     {
         "mainPlatform": "tweet",
+        "summary": "Simon discusses Legacy Engine details + launcher info",
+        "mainText": "In a day full of tweets, Simon states that Hytale's legacy engine (C# client, Java backend) has options for cross-play, which would need to be looked into, and plugins/modding 'probably' work both like Minecraft's Java plugins + the scripting, which was shown in the original trailer. Java is used for the backend because it aids in speed of development, enables developers to be trained more easily, and already has a massive server/modding community. Additionally, Simon says he'd try to make parts of the game shared source or open source, with a bounty system for bugs/features. When asked about a launcher, Simon explains that the game would be updated very frequently, making an independent launcher ideal initially - though Simon believes a Steam release would be best down the line (following in Path of Exile's footsteps), with a goal being Hytale on the Steam Deck (with Windows/Mac support confirmed + Linux potentially being possible). Of course, Custom Input Support would also be ideal.",
+        "date": "07 25 2025",
+        "tags": [
+            "Simon",
+            "Post-Cancellation",
+            "Early Access",
+            "Servers",
+            "Modding"
+        ],
+        "sources": [
+            {
+                "1": [
+                    "C# client, Java backend",
+                    "https://xcancel.com/Simon_Hypixel/status/1948703787901649077"
+                ]
+            },
+            {
+                "2": [
+                    "Crossplay potential",
+                    "https://xcancel.com/Simon_Hypixel/status/1948684505906118935"
+                ]
+            },
+            {
+                "3": [
+                    "Plugins/Modding",
+                    "https://xcancel.com/Simon_Hypixel/status/1948697045340225583"
+                ]
+            },
+            {
+                "4": [
+                    "Reason for Java backend",
+                    "https://xcancel.com/Simon_Hypixel/status/1948715554186956877"
+                ]
+            },
+            {
+                "5": [
+                    "Shared/Open Source, bounties",
+                    "https://xcancel.com/Simon_Hypixel/status/1948806929838424548"
+                ]
+            },
+            {
+                "6": [
+                    "Independent launcher",
+                    "https://xcancel.com/Simon_Hypixel/status/1948912051230810331"
+                ]
+            },
+            {
+                "7": [
+                    "PoE footsteps",
+                    "https://xcancel.com/Simon_Hypixel/status/1948912324334813605"
+                ]
+            },
+            {
+                "8": [
+                    "Steam Deck goal",
+                    "https://xcancel.com/Simon_Hypixel/status/1948922300016832611"
+                ]
+            },
+            {
+                "9": [
+                    "OS support",
+                    "https://xcancel.com/Simon_Hypixel/status/1948922672496206290"
+                ]
+            },
+            {
+                "10": [
+                    "Custom Input Source",
+                    "https://xcancel.com/Simon_Hypixel/status/1948919597148623080"
+                ]
+            }
+        ]
+    },
+    {
+        "mainPlatform": "tweet",
         "summary": "Simon discusses the financials, community events.",
         "mainText": "Responding to a user, Simon clarifies that his previously mentioned figure of $25M USD would be put towards development, with $1M-$2M likely being burnt before release. There were no plans on monetization of Hytale due to many offers, and Simon states that the price of the game will depend on math being done later. Additionally, Simon says there won't be events like 'Hycon' or even offices before the game is released and feels good, but it's good to know he'd always be invited.",
         "date": "07 24 2025",
