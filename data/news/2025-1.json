@@ -1,6 +1,26 @@
 [
     {
         "mainPlatform": "tweet",
+        "summary": "Simon announces active discussions with Riot Games.",
+        "mainText": "Taking to Twitter, Simon announced he has entered active discussions with Riot Games about acquiring Hytale, thanking the community for believing in Hytale.",
+        "date": "08 13 2025",
+        "tags": [
+            "Statement",
+            "Simon",
+            "Post-Cancellation",
+            "Business"
+        ],
+        "sources": [
+            {
+                "1": [
+                    "Active Discussions",
+                    "https://xcancel.com/Simon_Hypixel/status/1955704104367300768"
+                ]
+            }
+        ]
+    },
+    {
+        "mainPlatform": "tweet",
         "summary": "Simon discusses Riot decision makers, Hytale's vision under Riot, etc.",
         "mainText": "Simon states that some of Riot's decision makers aren't aware of the SaveHytale movement at all, and some people in the industry don't play games or look at their communities at all - forcing him to speak the universal language: money. Further more, Simon says the new vision for Hytale under Riot was akin to Roblox 2.0, with Fortnite-style events - and all gameplay features were 'redone' for sake of perfection as promises were added. In the end, the new vision got zero players, and Simon now believes that an indie setup is the only path for Hytale to be saved while still being *Hytale* -- and the SaveHytale movement helped him feel comfortable pursuing it.",
         "date": "08 12 2025",
