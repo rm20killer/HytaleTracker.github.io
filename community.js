@@ -18,7 +18,7 @@ let chunkToGetJson;
     chunkToGetJson = startJsonChunk;
 
     console.log(chunkToGetJson);
-
+})();
 
 const communityContainer = document.getElementById("grid");
 const scrollWatcher = document.createElement("div");
@@ -314,4 +314,3 @@ filterSubmitButton.addEventListener("click", () => {
         createCommunityElements(selectedTags, minDate, maxDate);
     }
 })
-})();

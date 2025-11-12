@@ -16,7 +16,7 @@ let chunkToGetJson;
     chunkToGetJson = startJsonChunk;
 
     console.log(chunkToGetJson);
-
+})();
 
 const newsContainer = document.getElementById("news");
 const scrollWatcher = document.createElement("div");
@@ -414,4 +414,3 @@ document.addEventListener('keydown', function(event) {
         easterEggKeysPressed = [easterEggKeysPressed[l - 4], easterEggKeysPressed[l - 3], easterEggKeysPressed[l - 2], easterEggKeysPressed[l - 1]];
     }
 });
-})();
