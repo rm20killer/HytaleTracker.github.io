@@ -1,7 +1,7 @@
 //load the uh uh uh the uh um uh the uh news from the uh uh uh the uh um uh the uh JSON file
 let startJsonChunk;
 async function loadHighest() {
-    const data = await fetch("./data/highest.json").then(r => r.json());
+    const data = await fetch("./data/highest.json", { cache: "no-store" }).then(r => r.json());
     startJsonChunk = data[0];
 }
 loadHighest();

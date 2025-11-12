@@ -3,7 +3,7 @@ const grid = document.getElementById('grid');
 
 let startJsonChunk;
 async function loadHighest() {
-    const data = await fetch("./data/highest.json").then(r => r.json());
+    const data = await fetch("./data/highest.json", { cache: "no-store" }).then(r => r.json());
     startJsonChunk = data[0];
 }
 loadHighest();
