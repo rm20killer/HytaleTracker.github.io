@@ -224,7 +224,7 @@ function filterItems(item, filters, minDate, maxDate){
 }
 
 window.addEventListener("load", async function() {
-    const indexesResponse = await fetch("./data/indexes.json");
+    const indexesResponse = await fetch("./data/indexes.json", { cache : "no-store" });
     indexes = await indexesResponse.json();
 
 

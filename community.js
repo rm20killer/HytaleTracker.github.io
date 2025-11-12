@@ -217,7 +217,7 @@ function filterItems(item, filters, minDate, maxDate){
 }
 
 window.addEventListener("load", async function() {
-    const indexesResponse = await fetch("./data/communityindexes.json");
+    const indexesResponse = await fetch("./data/communityindexes.json", { cache : "no-store" });
     indexes = await indexesResponse.json();
 
     yearToGetJson = currentDate.getFullYear();
