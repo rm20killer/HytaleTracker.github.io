@@ -10,6 +10,7 @@
   <body>
     <nav>
       <div id="navbar">
+        <img src="favicon.ico" class="hytaleTrackerLogo">
         <h1>The Hytale Tracker</h1>
         <h3>Your #1 source for Hytale news all in one place</h3>
         <div id="navLinks">
@@ -22,29 +23,32 @@
     </nav>
     <main>
         <div id="news">
-            <div id = filter>
-              <button id="filterDropdown" style="cursor: pointer;">filters</button><br>
-              <div id = filters>
-                <form id="filterForm">
-                  
-                </form>
-                <button id = "filter-submit-button">Submit</button>
-                <button id="clear-filters">clear</button>
-              </div>
-              <div id="date-filter">
-                <h3>Date: </h3>
-                <form id="date-form">
-                  <label for="min-date-input">start date: </label>
-                  <input type="date" id="min-date-input" name="min-date-input">
-
-                  <br>
-                  
-                  <label for="max-date-input">end date: </label>
-                  <input type="date" id="max-date-input" name="max-date-input">
-                </form>
-                <button id="clear-dates">clear</button>
-              </div>
+          <div id="stats">
+            <button id="statsButton">Stats</button>
+          </div>
+          <div id = filter>
+            <button id="filterDropdown" style="cursor: pointer;">filters</button><br>
+            <div id = filters>
+              <form id="filterForm">
+                
+              </form>
+              <button id = "filter-submit-button">Submit</button>
+              <button id="clear-filters">clear</button>
             </div>
+            <div id="date-filter">
+              <h3>Date: </h3>
+              <form id="date-form">
+                <label for="min-date-input">start date: </label>
+                <input type="date" id="min-date-input" name="min-date-input">
+
+                <br>
+                
+                <label for="max-date-input">end date: </label>
+                <input type="date" id="max-date-input" name="max-date-input">
+              </form>
+              <button id="clear-dates">clear</button>
+            </div>
+          </div>
         </div>
     </main>
     <script src="news.js"></script>
