@@ -268,6 +268,12 @@ scrollObvserver.observe(scrollWatcher);
 //filtering
 const filterSubmitButton = document.getElementById("filter-submit-button");
 filterSubmitButton.addEventListener("click", () => {
+    filter();
+})
+document.getElementById("submit-dates").addEventListener("click", () => {
+     filter();   
+})
+function filter(){
     yearToGetJson = currentDate.getFullYear();
     chunkToGetJson = Number(indexes[String(yearToGetJson)]) + 1 || 0;
     lastDay = '';
@@ -305,5 +311,80 @@ filterSubmitButton.addEventListener("click", () => {
     else{
         console.log("creating news elements with filter");
         createCommunityElements(selectedTags, minDate, maxDate);
+    }
+}
+
+document.getElementById("clearFilters").addEventListener("click", () => {
+    yearToGetJson = currentDate.getFullYear();
+    chunkToGetJson = Number(indexes[String(yearToGetJson)]) + 1 || 0;
+    lastDay = '';
+    const form = document.getElementById("filterForm");
+    const children = form.children;
+    let selectedTags = [];
+    console.log(children);
+    for(let child of children){
+        if(child.nodeName == "INPUT"){
+            console.log(child.id);
+            if(child.checked){
+                selectedTags.push(child.id);
+            }
+        }
+    }
+    console.log(selectedTags);
+    const communityItemsToRemove = document.getElementsByClassName("community-item");
+    const dividersToRemove = document.getElementsByClassName("divider");
+    const datesToRemove = document.getElementsByClassName("date");
+    const minDate = document.getElementById("min-date-input").value;
+    const maxDate = document.getElementById("max-date-input").value;
+    while(communityItemsToRemove[0]){
+        communityItemsToRemove[0].remove();
+    }
+    while(dividersToRemove[0]){
+        dividersToRemove[0].remove();
+    }
+    while(datesToRemove[0]){
+        datesToRemove[0].remove();
+    }
+    itemsCreated = 0;
+    createCommunityElements("null", minDate, maxDate);
+})
+document.getElementById("clear-dates").addEventListener("click", () => {
+    yearToGetJson = currentDate.getFullYear();
+    chunkToGetJson = Number(indexes[String(yearToGetJson)]) + 1 || 0;
+    lastDay = '';
+    const form = document.getElementById("filterForm");
+    const children = form.children;
+    let selectedTags = [];
+    console.log(children);
+    for(let child of children){
+        if(child.nodeName == "INPUT"){
+            console.log(child.id);
+            if(child.checked){
+                selectedTags.push(child.id);
+            }
+        }
+    }
+    console.log(selectedTags);
+    const communityItemsToRemove = document.getElementsByClassName("community-item");
+    const dividersToRemove = document.getElementsByClassName("divider");
+    const datesToRemove = document.getElementsByClassName("date");
+    const minDate = document.getElementById("min-date-input").value;
+    const maxDate = document.getElementById("max-date-input").value;
+    while(communityItemsToRemove[0]){
+        communityItemsToRemove[0].remove();
+    }
+    while(dividersToRemove[0]){
+        dividersToRemove[0].remove();
+    }
+    while(datesToRemove[0]){
+        datesToRemove[0].remove();
+    }
+    itemsCreated = 0;
+    if(selectedTags.length == 0){
+        createCommunityElements("null", "null", "null");
+    }
+    else{
+        console.log("creating news elements with filter");
+        createCommunityElements(selectedTags, "null", "null");
     }
 })
