@@ -1,6 +1,26 @@
 [
     {
         "mainPlatform": "tweet",
+        "summary": "Simon discusses goals, what is required before Early Access.",
+        "mainText": "In a lengthy tweet, Simon declares his goal is to bring the game to players and modders as soon as possible, even in a bad state, and avoid expectations growing during another delay. With that being said, there is a lot of work to be done before early access can launch - creating a launcher with a patcher, creating authentication services, account system, a website, reviving social media accounts, creating a bug reporting system with automated crash reporting, and then making a buy page, payment systems, a support page / team, writing privacy policies and Terms of Services... and *then* cleaning up the codebase/assets, and set up dev environments.",
+        "date": "10 12 2025",
+        "tags": [
+            "Statement",
+            "Simon",
+            "Post-Cancellation",
+            "Early Access"
+        ],
+        "sources": [
+            {
+                "1": [
+                    "Goals, pre-release steps.",
+                    "https://xcancel.com/Simon_Hypixel/status/1977493311884808656"
+                ]
+            }
+        ]
+    },
+    {
+        "mainPlatform": "tweet",
         "summary": "Simon discusses the engine rewrites Hytale has had.",
         "mainText": "After being questioned about Noxy alluding to releasing a Hytale trailer in '16, Simon reveals that it never happened because they decided to rewrite the game in a new engine, calling it the most important decision in Hytale history -- choosing a cross-platform language could've saved a lot of trouble, but would've required developing 'in the dark,' and would've been close to impossible and too expensive. Looking forward, Simon says a rewrite // parallel development could be wise in the future, but he'd rather focus on what exists now.",
         "date": "08 25 2025",
