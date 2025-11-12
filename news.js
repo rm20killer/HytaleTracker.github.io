@@ -97,7 +97,8 @@ function createNewsElements(filters, minDate, maxDate){
                             tag.className = "tag";
                             tag.textContent = tagText;
                             try{
-                                tag.style.backgroundColor = tagsJson[2].colors[0][tagText] || "#1d293d";
+                                tag.style.backgroundColor = tagsJson[2].colors[0][tagText][0] || "#1d293d";
+                                tag.style.color = tagsJson[2].colors[0][tagText][1] || "#b5bac5";
                             }catch(error){
                                 console.error("error loading tag color from json", error);
                                 tag.style.backgroundColor = "#1d293d";

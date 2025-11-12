@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
         wrap.innerHTML = `
             <input class="color-key" placeholder="tag name">
             <input class="color-value" placeholder="#hex or color">
+            <input class="text-color" placeholder = "#hex or color">
         `;
 
         document.getElementById("tag-colors").before(wrap);
@@ -63,8 +64,12 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelectorAll(".color-pair").forEach(pair => {
             const key = pair.querySelector(".color-key").value.trim();
             const val = pair.querySelector(".color-value").value.trim();
-            if (key && val) {
-                colorObj[key] = val;
+            const txt = pair.querySelector(".text-color").value.trim();
+            if(key && val && txt){
+                colorObj[key] = [val, txt];
+            }
+            else if (key && val) {
+                colorObj[key] = [val];
             }
         });
 

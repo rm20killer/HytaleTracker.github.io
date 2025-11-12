@@ -7,8 +7,8 @@
     },
     {
         "colors": [{
-            "Statement": "#FA8F8F",
-            "Simon": "#57C2F7"
+            "Statement": ["#FA8F8F"],
+            "Simon": ["#57C2F7"]
         }]
     }
 ]

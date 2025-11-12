@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 label.textContent = tag;
                 try{
                     label.style.backgroundColor = data[2].colors[0][tag];
+                    label.style.color = data[2].colors[0][tag][1] || "#b5bac5";
                 }catch(error){
                     console.error("error loading tag color from json", error);
                 }
@@ -39,6 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 label.textContent = tag;
                 try{
                     label.style.backgroundColor = data[2].colors[0][tag];
+                    label.style.color = data[2].colors[0][tag][1] || "#b5bac5";
                 }catch(error){
                     console.error("error loading tag color from json", error);
                 }
