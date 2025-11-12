@@ -314,7 +314,7 @@ function filter(){
     }
 }
 
-document.getElementById("clearFilters").addEventListener("click", () => {
+document.getElementById("clear-filters").addEventListener("click", () => {
     yearToGetJson = currentDate.getFullYear();
     chunkToGetJson = Number(indexes[String(yearToGetJson)]) + 1 || 0;
     lastDay = '';
