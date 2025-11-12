@@ -1,7 +1,22 @@
 //load the uh uh uh the uh um uh the uh news from the uh uh uh the uh um uh the uh JSON file
-const currentDate = new Date();
-let yearToGetJson = currentDate.getFullYear();
-let chunkToGetJson = 0;
+let startJsonChunk;
+async function loadHighest() {
+    const data = await fetch("./data/highest.json").then(r => r.json());
+    startJsonChunk = data[0];
+}
+loadHighest();
+
+let yearToGetJson;
+let chunkToGetJson;
+(async () => {
+    await loadHighest();
+
+    const currentDate = new Date();
+    yearToGetJson = currentDate.getFullYear();
+    chunkToGetJson = startJsonChunk;
+
+    console.log(chunkToGetJson);
+
 
 const newsContainer = document.getElementById("news");
 const scrollWatcher = document.createElement("div");
@@ -15,7 +30,6 @@ function loadFile(year, chunk) {
     return caches.open("jsonCache").then(cache => {
         return fetch(path, { cache: "no-store" })
             .then(response => {
-                if (!response.ok) throw new Error("NO_FILE");
                 return cache.put(path, response.clone()).then(() => response.json());
             });
     });
@@ -28,7 +42,6 @@ function getCachedOrFetch(year, chunk) {
 
         if (!response) {
             response = await fetch(path, { cache: "no-store" });
-            if (!response.ok) throw new Error("NO_FILE");
             await cache.put(path, response.clone());
         }
 
@@ -129,7 +142,7 @@ function createNewsElements(filters, minDate, maxDate){
             
              .catch(error => {
                 if (error.message === "NEXT_YEAR") {
-                    chunkToGetJson += 1;
+                    chunkToGetJson -= 1;
 
                     loadFile(yearToGetJson, chunkToGetJson)
                         .then(() => {
@@ -139,7 +152,7 @@ function createNewsElements(filters, minDate, maxDate){
                         .catch(err => {
                             if (err.message === "NO_FILE") {
                                 yearToGetJson -= 1;
-                                chunkToGetJson = 0;
+                                chunkToGetJson = startJsonChunk;
 
                                 if (yearToGetJson < 2015) {
                                     console.log("no more data to load");
@@ -153,9 +166,16 @@ function createNewsElements(filters, minDate, maxDate){
                             }
                         });
 
-                } else if (error.message === "NO_FILE") {
-                    yearToGetJson -= 1;
-                    chunkToGetJson = 0;
+                }
+                else {
+                    console.error(error, yearToGetJson, chunkToGetJson);
+
+                    chunkToGetJson -= 1;
+
+                    if(chunkToGetJson < 0){
+                        chunkToGetJson = startJsonChunk;
+                        yearToGetJson -= 1;
+                    }
 
                     if (yearToGetJson < 2015) {
                         console.log("no more data to load");
@@ -164,9 +184,8 @@ function createNewsElements(filters, minDate, maxDate){
 
                     itemsCreated = 0;
                     createNewsElements(filters, minDate, maxDate);
-                } else {
-                    console.error(error, yearToGetJson, chunkToGetJson);
                 }
+                
             });
              
 }
@@ -395,3 +414,4 @@ document.addEventListener('keydown', function(event) {
         easterEggKeysPressed = [easterEggKeysPressed[l - 4], easterEggKeysPressed[l - 3], easterEggKeysPressed[l - 2], easterEggKeysPressed[l - 1]];
     }
 });
+})();
