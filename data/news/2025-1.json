@@ -1,6 +1,69 @@
 [
     {
         "mainPlatform": "tweet",
+        "summary": "Simon discusses monetization, revenue sharing.",
+        "mainText": "According to Simon, a Creator Code-like system is possible, with an option to receive revenue sharing from Hytale itself - meaning all mods could be free, but modders could still make money. A Creator Code-like system intended for mod devs would need to avoid adding complexity to accounting, and would need an automated application process. When asked about servers being Pay To Win, Simon says no official server or content would be P2W, and any P2W server wouldn't appear in the server browser. Looking to Microsoft and Roblox, Simon says Microsoft has fought to keep P2W out of Minecraft but it's a losing battle, and Roblox promotes P2W content to reap money - Hytale would only promote \"clean\" servers, potentially letting them access more things.",
+        "date": "08 17 2025",
+        "tags": [
+            "Simon",
+            "Post-Cancellation",
+            "Community",
+            "Modding",
+            "Business"
+        ],
+        "sources": [
+            {
+                "1": [
+                    "Potential Revenue Sharing for modders.",
+                    "https://xcancel.com/Simon_Hypixel/status/1956983434796015988"
+                ]
+            },
+            {
+                "2": [
+                    "Avoid problems with Code system.",
+                    "https://xcancel.com/Simon_Hypixel/status/1957039993903305023"
+                ]
+            },
+            {
+                "3": [
+                    "No official P2W servers.",
+                    "https://xcancel.com/Simon_Hypixel/status/1957225297679732785"
+                ]
+            },
+            {
+                "4": [
+                    "P2W servers wouldn't appear in-game.",
+                    "https://xcancel.com/Simon_Hypixel/status/1957224119914705313"
+                ]
+            },
+            {
+                "5": [
+                    "No official P2W content.",
+                    "https://xcancel.com/Simon_Hypixel/status/1957218517003960681"
+                ]
+            },
+            {
+                "6": [
+                    "Microsoft vs P2W.",
+                    "https://xcancel.com/Simon_Hypixel/status/1957225697967034795"
+                ]
+            },
+            {
+                "7": [
+                    "Promoting Clean vs Roblox P2W.",
+                    "https://xcancel.com/Simon_Hypixel/status/1957225048378396738"
+                ]
+            },
+            {
+                "8": [
+                    "Rewarding non-P2W servers.",
+                    "https://xcancel.com/Simon_Hypixel/status/1957220390847053908"
+                ]
+            }
+        ]
+    },
+    {
+        "mainPlatform": "tweet",
         "summary": "Simon discusses various features in Hytale.",
         "mainText": "In a series of 11 tweets, Simon discusses various features, such as being able to transform into anything in Creative, from a potato to a kweebec or a dragon, with a whole menu controlling it in-game. When asked about survival mode transformations, Simon notes it as a feature he'd love to see eventually. While discussing the transformation menu, Simon mentions a Weather Control menu also existing. Shifting gears, Simon says the rewritten PVP and Parkour systems would be kept, and while there was a prototyped automation system, he'd consider hiring a modder who developed a sufficient automation mod. Finally, Simon confirms that trees do fall.",
         "date": "08 16 2025",
