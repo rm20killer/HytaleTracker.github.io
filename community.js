@@ -66,7 +66,7 @@ function createCommunityElements(filters, minDate, maxDate){
                         image.className = "community-image";
                         image.src = item.image;
                         image.style.borderRadius = "10px"
-                        image.style.width = "100%"
+                        image.style.width = "60%"
 
                         imageDiv.style.width = "100%";
                         imageDiv.style.height = "70%";

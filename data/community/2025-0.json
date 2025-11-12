@@ -1,10 +1,10 @@
 [
     {
-        "image": "./assets/Hytale.jpg",
-        "mainText": "lorem ipsum",
-        "summary": "this is an example",
-        "link": "https://google.com",
-        "date": "8 28 2025",
-        "tags": ["example", "lorem ipsum"]
+        "image": "./favicon.ico",
+        "mainText": "This is your one-stop shop for all Hytale news, learn more about us on the about page.",
+        "summary": "The Hytale Tracker launches!",
+        "link": "https://hytaletracker.github.io/about",
+        "date": "11 12 2025",
+        "tags": ["announcement"]
     }
 ]

@@ -3,6 +3,9 @@
     src: url(./assets/Poppins-Regular.ttf);
 }
 @media (min-width: 800px){
+    .fullLogoAbout{
+        height: 225px;
+    }
     #filterForm{
         height: fit-content;
         width: fit-content;
@@ -110,10 +113,6 @@ button{
     padding: 5px;
     cursor: pointer;
 }
-#statsButton{
-    float: right;
-    margin-right: 10px;
-}
 a{
     color: teal;
 }
@@ -181,6 +180,9 @@ body{
 }
 @media (max-width: 800px), (orientation: portrait){
     /* mobile devices */
+    .fullLogoAbout{
+        width: 90%;
+    }
     .hytaleTrackerLogo{
         height: 100px;
     }
