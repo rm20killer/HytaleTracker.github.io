@@ -404,6 +404,7 @@ function filter(){
         createNewsElements(selectedTags, minDate, maxDate);
     }
 }
+
 document.getElementById("clear-filters").addEventListener("click", () => {
     yearToGetJson = currentDate.getFullYear();
     chunkToGetJson = Number(indexes[String(yearToGetJson)]) + 1 || 0;
