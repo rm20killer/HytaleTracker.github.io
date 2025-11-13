@@ -413,8 +413,6 @@ function filter(){
         console.log("creating news elements with filter");
         createNewsElements(selectedTags, minDate, maxDate);
     }
-    document.getElementById("sources-div").style.display = "none";
-    lastClickedDiv = "";
 }
 
 document.getElementById("clear-filters").addEventListener("click", () => {
@@ -450,8 +448,6 @@ document.getElementById("clear-filters").addEventListener("click", () => {
     }
     itemsCreated = 0;
     createNewsElements("null", minDate, maxDate)
-    document.getElementById("sources-div").style.display = "none";
-    lastClickedDiv = "";
 })
 document.getElementById("clear-dates").addEventListener("click", () => {
     yearToGetJson = currentDate.getFullYear();
@@ -476,6 +472,8 @@ document.getElementById("clear-dates").addEventListener("click", () => {
     const newsItemsToRemove = document.getElementsByClassName("news-item");
     const dividersToRemove = document.getElementsByClassName("divider");
     const datesToRemove = document.getElementsByClassName("date");
+    const minDate = document.getElementById("min-date-input").value;
+    const maxDate = document.getElementById("max-date-input").value;
     while(newsItemsToRemove[0]){
         newsItemsToRemove[0].remove();
     }
@@ -493,8 +491,6 @@ document.getElementById("clear-dates").addEventListener("click", () => {
         console.log("creating news elements with filter");
         createNewsElements(selectedTags, "null", "null");
     }
-    document.getElementById("sources-div").style.display = "none";
-    lastClickedDiv = "";
 })
 
 
