@@ -317,6 +317,7 @@ function createSources(){
 
     xButton.addEventListener("click", () => {
         sourcesDiv.style.display = "none";
+        lastClickedDiv = "";
     })
 
 
