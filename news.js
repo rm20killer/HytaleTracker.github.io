@@ -184,7 +184,7 @@ function createNewsElements(filters, minDate, maxDate){
 }
 function filterItems(item, filters, minDate, maxDate){
     let createDiv = true;
-    if (minDate != "null") {
+    if (minDate && minDate != "null") {
         const [m, d, y] = item.date.split(" ");
 
         let itemDate = new Date();
@@ -201,7 +201,7 @@ function filterItems(item, filters, minDate, maxDate){
             return false;
         }
     }
-    if (maxDate != "null") {
+    if (maxDate && maxDate != "null") {
         const [m, d, y] = item.date.split(" ");
 
         let itemDate = new Date();
