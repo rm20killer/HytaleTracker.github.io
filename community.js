@@ -277,6 +277,7 @@ function filter(){
     yearToGetJson = currentDate.getFullYear();
     chunkToGetJson = Number(indexes[String(yearToGetJson)]) + 1 || 0;
     lastDay = '';
+    scrollObvserver.unobserve(scrollWatcher);
     const form = document.getElementById("filterForm");
     const children = form.children;
     let selectedTags = [];
@@ -318,6 +319,7 @@ document.getElementById("clear-filters").addEventListener("click", () => {
     yearToGetJson = currentDate.getFullYear();
     chunkToGetJson = Number(indexes[String(yearToGetJson)]) + 1 || 0;
     lastDay = '';
+    scrollObvserver.unobserve(scrollWatcher);
     const form = document.getElementById("filterForm");
     const children = form.children;
     let selectedTags = [];
@@ -352,6 +354,7 @@ document.getElementById("clear-dates").addEventListener("click", () => {
     yearToGetJson = currentDate.getFullYear();
     chunkToGetJson = Number(indexes[String(yearToGetJson)]) + 1 || 0;
     lastDay = '';
+    scrollObvserver.unobserve(scrollWatcher);
     const form = document.getElementById("filterForm");
     const children = form.children;
     let selectedTags = [];
