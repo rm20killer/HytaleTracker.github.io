@@ -74,7 +74,7 @@ function createNewsElements(filters, minDate, maxDate){
                             logo.src = "./assets/twitter.png";
                         }
                         else if(item.mainPlatform == "blog" || item.mainPlatform == "update"){
-                            logo.src = "./assets/hytale.jpg";
+                            logo.src = "./assets/Hytale.jpg";
                             logo.style.borderRadius = "5px";
                         }
 
