@@ -1,6 +1,6 @@
 [
     {
-        "image": ".assets/Hytale.jpg",
+        "image": "./assets/Hytale.jpg",
         "mainText": "The Hytale.com website is back,the socials are back up, and Simon has officially saved Hytale, Thank you Simon.",
         "summary": "HYTALE IS SAVED",
         "link": "https://hytale.com",
