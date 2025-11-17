@@ -1,5 +1,13 @@
 [
     {
+        "image": "./assets/Hytale.jpg",
+        "mainText": "The Hytale.com website is back,the socials are back up, and Simon has officially saved Hytale, Thank you Simon.",
+        "summary": "HYTALE IS SAVED",
+        "link": "https://hytale.com",
+        "date": "11 17 2025",
+        "tags": ["announcement", "Hytale"]
+    },
+    {
         "image": "./assets/rssLogo.png",
         "mainText": "Add the hytale tracker to your RSS reader by clicking on this post",
         "summary": "RSS now supported!",
