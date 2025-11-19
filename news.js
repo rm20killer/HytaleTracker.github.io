@@ -332,6 +332,9 @@ function createSources(){
 
     const sourcesDiv = document.getElementById("sources-div");
     sourcesDiv.style.display = "inherit";
+    sourcesDiv.style.opacity = "0";
+    sourcesDiv.classList.remove("SourceAnimate");
+    
 
     const xButton = document.getElementById("xButton");
 
@@ -387,6 +390,8 @@ function createSources(){
         }
     })
     }
+    document.getElementById("sources-div").classList.add("SourceAnimate");
+
 }
 
 
