@@ -83,6 +83,9 @@ function createNewsElements(filters, minDate, maxDate){
                         else if(item.mainPlatform == "Discord"){
                             logo.src = "./assets/DiscordLogo.png";
                         }
+                        else if(item.mainPlatform == "Youtube"){
+                            logo.src = "./assets/YoutubeLogo.png";
+                        }
 
                         const logospan = document.createElement('span');
                         logospan.className = "logospan";

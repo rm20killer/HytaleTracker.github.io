@@ -73,6 +73,9 @@ document.getElementById("create").addEventListener("click", () => {
     if(mainPlatform == "Reddit"  && !tags.includes("Reddit")){
         tags.push("Reddit");
     }
+    if(mainPlatform == "Youtube"  && !tags.includes("Youtube")){
+        tags.push("Youtube");
+    }
 
     let sourceIndex = 1;
     const sources = [];
